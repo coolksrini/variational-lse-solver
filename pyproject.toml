@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "variational-lse-solver"
+dynamic = ["version"]
+description = "Comprehensive Library of Variational LSE Solvers"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = "~=3.12"
+authors = [
+    { name = "Fraunhofer IIS", email = "nico.meyer@iis.fraunhofer.de" },
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pennylane~=0.34",
+    "torch~=2.2.1",
+    "tqdm~=4.66.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/nicomeyer96/variational-lse-solver"
+
+[tool.hatch.version]
+path = "variational_lse_solver/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/variational_lse_solver",
+]
